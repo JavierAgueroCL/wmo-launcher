@@ -126,6 +126,15 @@ if($siege_fast[1] != $server_info['Midgard_Siege']) { mysql_query("UPDATE `wmo_s
 if($siege_low[1] != $server_info['Helheim_Siege']) 	{ mysql_query("UPDATE `wmo_serverinfo` SET `Value`='".$siege_low[1]."' WHERE `Key`='Helheim_Siege' "); }
 if($siege_fast[0] != $server_info['Siege_Date']) 	{ mysql_query("UPDATE `wmo_serverinfo` SET `Value`='".$siege_fast[0]."' WHERE `Key`='Siege_Date' "); }
 
+//USUARIOS ACTIVOS
+$ActiveUsers = mssql_num_rows(mssql_query("SELECT AccountID FROM ConnectionHistory
+					WHERE Date >=DATEADD(day,-7,DATEADD(day,DATEDIFF(day,0,GETDATE()),0)) AND Date <=DATEADD(day,DATEDIFF(day,0,GETDATE()),0)
+					GROUP BY AccountID
+			"));
+
+if($ActiveUsers != $server_info['ActiveUsers']) { mysql_query("UPDATE `wmo_serverinfo` SET `Value`='".$ActiveUsers."' WHERE `Key`='ActiveUsers' "); }
+
+
 
 $db->close_mysql();
 $db->close_connection();
