@@ -119,8 +119,8 @@ if($este_mes == $server_info['Mes_Actual']) {
 }
 
 //CASTLE SIEGE
-$siege_fast = mssql_fetch_row(mssql_query("SELECT SIEGE_END_DATE, OWNER_GUILD FROM S10_Fast_MuOnline.dbo.MuCastle_DATA"));
-$siege_low = mssql_fetch_row(mssql_query("SELECT SIEGE_END_DATE, OWNER_GUILD FROM S10_Low_MuOnline.dbo.MuCastle_DATA"));
+$siege_fast = mssql_fetch_row(mssql_query("SELECT FORMAT(SIEGE_END_DATE,'yyyy/MM/dd', 'en-us'), OWNER_GUILD FROM S10_Fast_MuOnline.dbo.MuCastle_DATA"));
+$siege_low = mssql_fetch_row(mssql_query("SELECT FORMAT(SIEGE_END_DATE,'yyyy/MM/dd', 'en-us'), OWNER_GUILD FROM S10_Low_MuOnline.dbo.MuCastle_DATA"));
 
 if($siege_fast[1] != $server_info['Midgard_Siege']) { mysql_query("UPDATE `wmo_serverinfo` SET `Value`='".$siege_fast[1]."' WHERE `Key`='Midgard_Siege' "); }
 if($siege_low[1] != $server_info['Helheim_Siege']) 	{ mysql_query("UPDATE `wmo_serverinfo` SET `Value`='".$siege_low[1]."' WHERE `Key`='Helheim_Siege' "); }
