@@ -1,0 +1,107 @@
+html {
+    overflow-y: hidden;
+}
+
+body {
+    background: #000;
+    margin: 0px;
+    height: 0px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+.big-title {
+	color: #fff;
+	font-family: "Arial";
+	font-size: 44px !important;
+}
+.intro {
+	color: #fff;
+	font-family: "Arial";
+	font-size: 22px !important;
+}
+.todo {
+	color: #fff;
+	font-family: "Arial";
+	background-color: #000;
+	padding: 7px 7px;
+	font-size: 10px;
+	border-radius: 30px;
+	opacity: .60;
+	filter: alpha(opacity=60);
+}
+.todo ul {
+	list-style: none;
+	padding-left: 10px;
+}
+
+.check {
+	color: #00cc00;
+}
+.notdo {
+	color: #ff0000;
+	font-weight: bolder;
+	display: inline-block;
+	text-align: center;
+	width: 10px;
+}
+
+.progreso {
+	background: #333;
+}
+
+.button {
+	display: block;
+	font-family: "Arial";
+	width: 100px !important;
+	padding: 8px 10px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid #fff;
+	color: #fff;
+	background: #5564f8;
+}
+.button:hover {
+	border: 1px solid #5564f8;
+	color: #5564f8;
+	background: #fff;	
+}
+
+h3 {
+	width: 100%;
+	background: #dfdfdf;
+	color: #333;
+	font-family: "Arial";
+	padding: 5px;
+}
+ul {
+	background: #fff;
+	margin-top: -19px;
+	margin-left: 0px;
+	padding-left: 30px;
+	padding-top: 10px;
+	height: 180px;
+}
+ul li a {
+	font-family: "Arial";
+	text-decoration: none;
+	font-size: 12px;
+}
+.botright {
+	background: #dfdfdf;
+	color: #333;
+	margin-top: -20px;
+	height: 40px;
+	padding-top: 12px;
+	font-family: "Arial";
+	font-size: 12px;
+	padding-left: 18px;
+}
+.botright .on {
+	color: #00cc00;
+}

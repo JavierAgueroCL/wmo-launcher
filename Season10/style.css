@@ -1,0 +1,62 @@
+html {
+    overflow-y: hidden;
+}
+
+body {
+    background: #000;
+    margin: 0px;
+    height: 0px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+    overflow-x: none !important;
+    overflow-y: none !important;
+}
+
+.big-title {
+	color: #fff;
+	font-family: "Arial";
+	font-size: 44px !important;
+}
+.intro {
+	color: #fff;
+	font-family: "Arial";
+	font-size: 22px !important;
+}
+.todo {
+	color: #fff;
+	font-family: "Arial";
+	background-color: #000;
+	padding: 7px 7px;
+	font-size: 10px;
+	border-radius: 0px;
+	opacity: .60;
+	filter: alpha(opacity=60);
+}
+.todo ul {
+	list-style: none;
+	padding-left: 0px !important;
+	padding-bottom: 0px !important;
+	margin-left: 10px;
+	margin-bottom: 0px;
+}
+
+.check {
+	color: #00cc00;
+}
+.notdo {
+	color: #ff0000;
+	font-weight: bolder;
+	display: inline-block;
+	text-align: center;
+	width: 10px;
+}
+
+.progreso {
+	background: #333;
+}
+pre {
+	background: #fff;
+}
